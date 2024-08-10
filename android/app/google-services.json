@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "696692161930",
+    "project_id": "foodapp-7783a",
+    "storage_bucket": "foodapp-7783a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696692161930:android:95eba86e2df33ed0465c73",
+        "android_client_info": {
+          "package_name": "com.ayush.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiIlmPqrum_aFMDj_TnX1FQTJhEldq0ko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
