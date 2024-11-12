@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {
-  const AboutPage({Key? key}) : super(key: key);
+  const AboutPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +101,7 @@ class AboutPage extends StatelessWidget {
             const SizedBox(height: 10),
             Row(
               children: [
-                Icon(
+                const Icon(
                   Icons.email,
                   color: Colors.grey, // Grey color for icons
                 ),

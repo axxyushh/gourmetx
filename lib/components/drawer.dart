@@ -57,11 +57,11 @@ class MyDrawer extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutPage()));
               }),
 
-          Spacer(),
+          const Spacer(),
           //logout list Tile
           MyDrawerTile(text: "L O G O U T", icon: Icons.logout, onTap: logout),
 
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ],

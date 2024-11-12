@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gourmetx/pages/login_page.dart';
 import 'package:gourmetx/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:gourmetx/models/restaurant.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:gourmetx/firebase_options.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:gourmetx/services/auth/auth_gate.dart';
 
 

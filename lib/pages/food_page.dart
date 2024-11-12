@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gourmetx/models/food.dart';
 import 'package:gourmetx/models/restaurant.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:provider/provider.dart';
 
 class FoodPage extends StatefulWidget {
   final Food food;
   final Map<Addon, bool> selectAddons = {};
-
-  FoodPage({
-    Key? key,
+  FoodPage({super.key,
     required this.food,
   }) {
     //Initialize the selected Addons as False.
@@ -53,20 +50,20 @@ class _FoodPageState extends State<FoodPage> {
                   width: double.infinity, // Take full width
                   fit: BoxFit.cover, // Cover the entire area
                 ),
-                SizedBox(height: 16), // Add spacing between image and text
+                const SizedBox(height: 16), // Add spacing between image and text
 
                 // Food Name
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
                     widget.food.name,
-                    style: TextStyle(color: Colors.white, fontSize: 24),
+                    style: const TextStyle(color: Colors.white, fontSize: 24),
                   ),
                 ),
 
                 //Food Price
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
                     '\$${widget.food.price.toString()}',
                     style: TextStyle(
@@ -77,20 +74,20 @@ class _FoodPageState extends State<FoodPage> {
 
                 // Food Description
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
                     widget.food.description,
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                 ),
-                SizedBox(height: 16),
-                Divider(
+                const SizedBox(height: 16),
+                const Divider(
                   color: Colors.white,
                 ),
 
                 //Addons Heading
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
                     "Add-ons",
                     style: TextStyle(
@@ -98,11 +95,11 @@ class _FoodPageState extends State<FoodPage> {
                         fontSize: 20),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
 
                 // Addons
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 16),
+                  margin: const EdgeInsets.symmetric(horizontal: 16),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Theme.of(context).colorScheme.secondary,
@@ -130,34 +127,34 @@ class _FoodPageState extends State<FoodPage> {
                               },
                               title: Text(
                                 addon.name,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white,
                                 ),
                               ),
                               subtitle: Text(
                                 '\$ ${widget.food.availableAddons[index].price.toString()}',
-                                style: TextStyle(color: Colors.white),
+                                style: const TextStyle(color: Colors.white),
                               ),
                             );
                           },
                         ),
-                        SizedBox(height: 8), // Additional space at the bottom
+                        const SizedBox(height: 8), // Additional space at the bottom
                       ],
                     ),
                   ),
                 ),
 
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
 
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 120),
+                  padding: const EdgeInsets.symmetric(horizontal: 120),
                   child: ElevatedButton(
                     onPressed: () =>
                         addToCart(widget.food, widget.selectAddons),
-                    child: Text('Add to Cart'),
+                    child: const Text('Add to Cart'),
                   ),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
               ],
             ),
           ),
@@ -168,7 +165,7 @@ class _FoodPageState extends State<FoodPage> {
           child: Opacity(
             opacity: 0.6,
             child: Container(
-              margin: EdgeInsets.only(left: 25),
+              margin: const EdgeInsets.only(left: 25),
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.secondary,
                 shape: BoxShape.circle,

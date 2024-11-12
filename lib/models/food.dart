@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:gourmetx/themes/theme_provider.dart';
 class Food {
   final String name;
   final String description;

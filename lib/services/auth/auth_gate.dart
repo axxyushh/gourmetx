@@ -22,7 +22,7 @@ class AuthGate extends StatelessWidget {
           //User is Not logged in
           else
           {
-              return LoginOrRegister();
+              return const LoginOrRegister();
           }
         },
       ),

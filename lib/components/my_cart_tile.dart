@@ -8,9 +8,9 @@ class MyCartTile extends StatelessWidget {
   final CartItem cartItem;
 
   const MyCartTile({
-    Key? key,
+    super.key,
     required this.cartItem,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class MyCartTile extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -47,15 +47,15 @@ class MyCartTile extends StatelessWidget {
                         // Food Name
                         Text(
                           cartItem.food.name,
-                          style: TextStyle(color: Colors.black),
+                          style: const TextStyle(color: Colors.black),
                         ),
                         // Food Price
                         Text(
-                          '\$' + cartItem.food.price.toString(),
-                          style: TextStyle(color: Colors.grey),
+                          '\$${cartItem.food.price}',
+                          style: const TextStyle(color: Colors.grey),
                         ),
 
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
 
 
                         // Increase and decrease of the quantity
@@ -87,7 +87,7 @@ class MyCartTile extends StatelessWidget {
                 children: cartItem.selectedAddons
                     .map(
                       (addon) => Padding(
-                    padding: EdgeInsets.only(right: 8),
+                    padding: const EdgeInsets.only(right: 8),
                     child: FilterChip(
                       label: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -95,13 +95,13 @@ class MyCartTile extends StatelessWidget {
                           // Addon Name
                           Text(
                             addon.name,
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
 
                           // Addon Price
                           Text(
-                            ' (\$' + addon.price.toString()+')',
-                            style: TextStyle(color: Colors.white),
+                            ' (\$${addon.price})',
+                            style: const TextStyle(color: Colors.white),
                           ),
                         ],
                       ),

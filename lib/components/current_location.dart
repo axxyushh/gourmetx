@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gourmetx/models/restaurant.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter/src/painting/text_style.dart';
 
 class MyCurrentLocation extends StatefulWidget {
   const MyCurrentLocation({super.key});
@@ -32,7 +31,7 @@ class _MyCurrentLocationState extends State<MyCurrentLocation> {
           ),
         ),
         content: TextField(
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
           controller: _addressController,
           cursorColor: Colors.blue,
           decoration: const InputDecoration(

@@ -28,10 +28,10 @@ class MySilverAppbar extends StatelessWidget {
             onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => const CartPage(),),);
             },
-            icon: Icon(Icons.shopping_cart),
+            icon: const Icon(Icons.shopping_cart),
         )
       ],
-      title: Text(
+      title: const Text(
           "Dine Delight",
           style: TextStyle(
             fontFamily: "assets",
@@ -44,7 +44,7 @@ class MySilverAppbar extends StatelessWidget {
         ),
         title: title,
         centerTitle: true,
-        titlePadding: EdgeInsets.only(left: 0, right: 0, top: 0),
+        titlePadding: const EdgeInsets.only(left: 0, right: 0, top: 0),
         expandedTitleScale: 1,
       ),
     );

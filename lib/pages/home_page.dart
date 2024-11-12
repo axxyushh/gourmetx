@@ -7,7 +7,6 @@ import 'package:gourmetx/components/description.dart';
 import 'package:gourmetx/components/tabbar.dart';
 import 'package:gourmetx/models/food.dart';
 import 'package:gourmetx/models/restaurant.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:gourmetx/components/foodTile.dart';
 import 'package:gourmetx/pages/food_page.dart';
 

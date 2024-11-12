@@ -144,7 +144,7 @@ import 'package:gourmetx/services/database/firestore.dart';
 import 'package:gourmetx/models/restaurant.dart';
 
 class DeliveryProgressPage extends StatefulWidget {
-  const DeliveryProgressPage({Key? key}) : super(key: key);
+  const DeliveryProgressPage({super.key});
 
   @override
   _DeliveryProgressPageState createState() => _DeliveryProgressPageState();
@@ -169,17 +169,17 @@ class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
     showDialog(
       context: context,
       builder: (context) {
-        return AlertDialog(
+        return const AlertDialog(
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
+              Text(
                 "Order Confirmed!",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: Colors.white),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               // Animation or Icon
-              const Icon(
+              Icon(
                 Icons.check_circle,
                 color: Colors.green,
                 size: 100,
@@ -203,9 +203,9 @@ class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
         backgroundColor: Colors.transparent,
       ),
       bottomNavigationBar: _buildBottomNavBar(context),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             children: [
               MyReceipt(),
@@ -233,7 +233,7 @@ class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
           // Profile Picture
           Container(
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.background,
+              color: Theme.of(context).colorScheme.surface,
               shape: BoxShape.circle,
             ),
             child: IconButton(
@@ -272,7 +272,7 @@ class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
               // Message Button
               Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.background,
+                  color: Theme.of(context).colorScheme.surface,
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(
@@ -287,7 +287,7 @@ class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
               // Call Button
               Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.background,
+                  color: Theme.of(context).colorScheme.surface,
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(

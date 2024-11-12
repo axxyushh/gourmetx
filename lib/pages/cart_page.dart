@@ -17,7 +17,7 @@ class CartPage extends StatelessWidget {
 
       return Scaffold(
         appBar: AppBar(
-          title: Text("Cart"),
+          title: const Text("Cart"),
           backgroundColor: Colors.transparent,
           foregroundColor: Theme.of(context).colorScheme.inversePrimary,
           actions: [
@@ -28,7 +28,7 @@ class CartPage extends StatelessWidget {
                   showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: Text("Sure you wanna clear the cart?",style: TextStyle(color: Colors.white),),
+                        title: const Text("Sure you wanna clear the cart?",style: TextStyle(color: Colors.white),),
                         actions: [
 
                           //Cancel Button
@@ -64,7 +64,7 @@ class CartPage extends StatelessWidget {
             Expanded(
                 child: Column(
                   children: [
-                    userCart.isEmpty? Expanded(child: Center(child: Text("Cart is Empty..",style: TextStyle(color: Colors.white,fontSize: 20),),)) : Expanded(
+                    userCart.isEmpty? const Expanded(child: Center(child: Text("Cart is Empty..",style: TextStyle(color: Colors.white,fontSize: 20),),)) : Expanded(
                       child:  ListView.builder(
                           itemCount: userCart.length ,
                           itemBuilder: (context, index){
@@ -90,7 +90,7 @@ class CartPage extends StatelessWidget {
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => PaymentPage(),
+                        builder: (context) => const PaymentPage(),
                     ),
                 ),
                 text: "Checkout"

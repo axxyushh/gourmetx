@@ -3,7 +3,6 @@ import 'food.dart';
 import 'cart_item.dart';
 import 'package:collection/collection.dart';
 import 'package:intl/intl.dart';
-import 'package:gourmetx/components/current_location.dart';
 
 class Restaurant extends ChangeNotifier{
 
@@ -1803,7 +1802,7 @@ void addToCart(Food food,  List<Addon> selectedAddons){
     bool isSameFood = item.food ==  food;
 
     //Check if the list of selected addons are the same
-    bool isSameAddons = ListEquality().equals(item.selectedAddons, selectedAddons);
+    bool isSameAddons = const ListEquality().equals(item.selectedAddons, selectedAddons);
 
     return isSameFood && isSameAddons;
 
@@ -1926,7 +1925,7 @@ double getTotalPrice()
     receipt.writeln("Total Items: ${getTotalItemCount()}");
     receipt.writeln("Total Price: ${_formatPrice(getTotalPrice()+2.99)}");
     receipt.writeln();
-    receipt.writeln("Delivering to: ${deliveryAddress}");
+    receipt.writeln("Delivering to: $deliveryAddress");
 
     return receipt.toString();
   }
@@ -1934,7 +1933,7 @@ double getTotalPrice()
     //format double value into the money
     String _formatPrice(double price)
     {
-        return "\$" + price.toStringAsFixed(2);
+        return "\$${price.toStringAsFixed(2)}";
     }
 
     //format list of addons into a string summary
@@ -1943,6 +1942,4 @@ double getTotalPrice()
 
         return addons.map((addon) =>  "${addon.name} (${_formatPrice(addon.price)})").join(", ");
     }
-
-
 }

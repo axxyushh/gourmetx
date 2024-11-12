@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gourmetx/components/button.dart';
 import 'package:gourmetx/components/textfield.dart';
-import 'package:gourmetx/pages/home_page.dart';
 import 'package:gourmetx/services/auth/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
@@ -22,10 +21,10 @@ class _LoginPageState extends State<LoginPage> {
   //login method
   void login() async{
 
-    final _authService = AuthService();
+    final authService = AuthService();
 
     try{
-      await _authService.signInWithEmailPassword(emailController.text, passwordController.text);
+      await authService.signInWithEmailPassword(emailController.text, passwordController.text);
     }
 
     catch(e)
@@ -55,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
 
@@ -68,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
 
@@ -78,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                 hintText: "Email",
                 obscureText: false),
 
-            SizedBox(
+            const SizedBox(
               height: 25.0,
             ),
 
@@ -88,14 +87,14 @@ class _LoginPageState extends State<LoginPage> {
                 hintText: "Password",
                 obscureText: true),
 
-            SizedBox(
+            const SizedBox(
               height: 25.0,
             ),
 
             //Sign in Button
             MyButton(onTap: login, text: "Sign In"),
 
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
 
@@ -108,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(
                       color: Theme.of(context).colorScheme.inversePrimary),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 4,
                 ),
                 GestureDetector(

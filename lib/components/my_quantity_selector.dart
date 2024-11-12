@@ -23,7 +23,7 @@ class QuantitySelector extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(50),
       ),
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -40,13 +40,13 @@ class QuantitySelector extends StatelessWidget {
 
            //Quantity Count
           Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               child: SizedBox(
                 width: 20,
                 child: Center(
                   child: Text(
                     quantity.toString(),
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black,
                     ),
                   ),
